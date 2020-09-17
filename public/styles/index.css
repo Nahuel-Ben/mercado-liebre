@@ -1,11 +1,35 @@
-#nota {
-    color: green;
-    font-size: small;
+:root {
+    --header-bg-color: #EAC926;
+  }
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: var(--header-bg-color);
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.precio {
+    color: #39b54a
 }
 
 h5 {
-    font-size: larger;
-    color: gray;
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 24px;
+    color:#666;
 }
 
 footer {
@@ -16,5 +40,8 @@ footer {
 #footer {
     font-size: smaller;
     text-align: left;
+}
 
+p {
+    font-size: 12px;
 }
