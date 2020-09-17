@@ -1,0 +1,20 @@
+#nota {
+    color: green;
+    font-size: small;
+}
+
+h5 {
+    font-size: larger;
+    color: gray;
+}
+
+footer {
+    color: gray;
+    text-align: center;  
+}
+
+#footer {
+    font-size: smaller;
+    text-align: left;
+
+}
