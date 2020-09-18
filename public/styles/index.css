@@ -1,5 +1,6 @@
 :root {
     --header-bg-color: #EAC926;
+    --camion-y-oferta:  #39b54a;
   }
 
 html {
@@ -20,7 +21,7 @@ h6 {
 }
 
 .precio {
-    color: #39b54a
+    color: var(--camion-y-oferta);
 }
 
 h5 {
@@ -44,4 +45,8 @@ footer {
 
 p {
     font-size: 12px;
+}
+
+.fas fa-shuttle-van{
+    color: var (--camion-y-oferta);
 }
