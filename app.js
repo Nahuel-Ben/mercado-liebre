@@ -9,6 +9,13 @@ app.get('/', function (req, res){
     res.sendFile(file);
 })
 
+app.get ('/register', function(req, res){
+    let file = path.resolve('register.html');
+
+    res.sendFile(file);
+})
+
+
 app.get('*',function(req, res){
     if(req.url.includes('.')){
         let file = path.resolve('public' + req.url);
