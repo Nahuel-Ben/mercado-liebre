@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel = "stylesheet" href = "styles/index.css">
-    <link rel = "stylesheet" href = "styles/register.css">
+    <link rel = "stylesheet" href = "styles/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -50,61 +50,18 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <form action = "register.html" method = "POST">
-            <p>
-                <input type="text" placeholder="Nombre y Apellido" name="nombrecompleto">
-            </p>
+        <form action = "login.html" method = "POST">
             <p>
                 <input type="text" placeholder="Nombre de usuario" name="nombredeusuario">
             </p>
             <p>
-                <input type="email" placeholder="Email" name="email">
-            </p>
-            <p>
-                <input type="date" name="fechadenacimiento" step="1" min="1900-01-01" max="2001-12-31">
-            </p>
-            <p>
-                <input type="text" placeholder="Domicilio" name="domicilio">
-            </p>
-            <p>
-                <h5><label for="">Perfil de usuario</label></h5>
-                <p>
-                    <input type="radio" name="perfil" value="Comp">Comprador
-                </p>
-                <p>
-                    <input type="radio" name="perfil" value="vend">Vendedor
-                </p>
-            </p>
-            <p>
-                <h5><label for="">Intereses</label></h5>
-            </p>
-            <p>
-                <input type="checkbox" name="electro" value="electro">Electro
-            
-                <input type="checkbox" name="moda" value="moda">Moda
-            
-                <input type="checkbox" name="hogar" value="hogar">Hogar
-
-                <input type="checkbox" name="vidasana" value="vidasana">Vida sana
-            </p>
-            <p>
-                <h5><label for="">Elegí tu foto de usuario</label></h5>
-            </p>
-            <p>
-                <button>Seleccionar archivo</button> No se eligió archivo.
-            </p>
-            <p>
-                <input type="password" placeholder="Elegí tu contraseña" name="pasword">
-            </p>
-            <p>
-                <input type="password" placeholder="Confirmá tu contraseña" name="pasword">
-            </p>
+                <input type="password" placeholder="contraseña" name="pasword">
             <p>
                 <input class="boton" type = "submit" value = "Enviar">
-                    <input class="boton-reset" type = "reset" value = "Borrar">
+                <input class="boton" type = "reset" value = "Borrar">
             </p>
-
         </form>
     </main>
 

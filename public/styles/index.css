@@ -11,6 +11,10 @@ header {
     background-color: var(--header-bg-color);
 }
 
+.w-50 {
+    width: 50%;
+}
+
 body {
     background-color: #ebebeb;
 }
@@ -20,10 +24,6 @@ h6 {
     font-weight: lighter;
 }
 
-.precio {
-    color: var(--camion-y-oferta);
-}
-
 h5 {
     font-size: 18px;
 }
@@ -31,22 +31,93 @@ h5 {
 h4 {
     font-size: 24px;
     color:#666;
-}
-
-footer {
-    color: gray;
-    text-align: center;  
-}
-
-#footer {
-    font-size: smaller;
-    text-align: left;
+    margin: 20px 0px;
+    width: 90%;
+    text-align: center;
 }
 
 p {
     font-size: 12px;
 }
 
-.fa-credit-card{
-    color: var (--camion-y-oferta);
+.precio {
+    color: var(--camion-y-oferta);
+}
+
+img{
+    width: 100%;
+}
+.producto {
+    background-color: white;
+    padding: 15px;
+}
+#navegacion .menu{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#navegacion .links{
+    display: none;
+    background-color: white;
+    font-size: 24px;
+}
+
+#navegacion .menu:hover .links{
+    display: block;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    margin: 5px;
+}
+
+.burguer{
+    display: block;
+    cursor: pointer;
+    background-color: #0044AA;
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+
+.burguer:hover{
+    background-color: #0022AA;
+}
+
+.home-banner{
+    width: 100%;
+    display: block;
+}
+
+.van {
+    color: var(--camion-y-oferta);
+    text-align: left;
+}
+
+
+footer {
+    color: gray;
+    text-align: center;
+    padding: 20px 5%; 
+}
+
+.footer-info{
+    margin: 10px 0px;
+}
+
+.footer-images{
+    color: #1259c3;
+}
+
+#copyright {
+    font-size: smaller;
+    text-align: left;
 }

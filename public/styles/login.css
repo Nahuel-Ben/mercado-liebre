@@ -14,11 +14,3 @@ input {
 .boton:hover{
     background-color: #0022AA;
 }
-
-.boton-reset{
-    color: white;
-    background-color: #AA0044;
-}
-.boton-reset:hover {
-    background-color: #CC1155;
-}
