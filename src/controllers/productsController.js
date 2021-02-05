@@ -6,21 +6,39 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const controller = {
+const productsController = {
 	// Root - Show all products
 	index: (req, res) => {
-		// Do the magic
-	},
+		let productList = [...products];
+
+        res.render('index', { stylesheet: 'bootstrap-grid.min', products : productList, toThousand })},
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		// Do the magic
+		let product = products.find((e) => e.id == req.params.id);
+        product.price = numberFormat(product.price);
+
+        if (product != undefined){
+            res.render('products/detalle', { title: '', stylesheet: 'bootstrap-grid.min', products : products})
+        }
+
+        let error = {
+            name: 'Lo sentimos',
+            price: '0',
+            description: 'El producto no existe',
+            image: 'producto-no-encontrado.png'
+        }
+
+        res.status(404).render('products/detalle', { title: 'Click Players | Detalle del producto', stylesheet: 'detalle', product : error})
+    
 	},
 
 	// Create - Form to create
-	create: (req, res) => {
+	create: (req, res) => 
 		// Do the magic
-	},
+		res.render('products/create', { title: 'Vender | Agregar producto', stylesheet: 'bootstrap-grid.min' }),
+	
 	
 	// Create -  Method to store
 	store: (req, res) => {
@@ -42,4 +60,4 @@ const controller = {
 	}
 };
 
-module.exports = controller;
+module.exports = productsController;
