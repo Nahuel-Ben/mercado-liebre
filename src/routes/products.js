@@ -1,7 +1,6 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
-const path = require('path');
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
@@ -15,11 +14,11 @@ router.post('/', productsController.store);
 
 
 /*** GET ONE PRODUCT ***/ 
-router.get('/detail:id/', productsController.detail); 
+router.get('/detail/:id', productsController.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
-router.put('/edit:id/', productsController.edit); 
-router.put('/update:id', productsController.update); 
+router.get('/edit/:id', productsController.edit); 
+router.put('/update/:id', productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 
