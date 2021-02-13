@@ -10,20 +10,17 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productsController = {
 	// Root - Show all products
 	index: (req, res) => {
-		let productList = [...products];
 
-        res.render('index', { stylesheet: 'bootstrap-grid.min', products : productList })},
-
+		res.render('products', {products : products})},
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		// Do the magic
 		let product = products.find((e) => e.id == req.params.id);
 
         if (product != undefined){
-            res.render('products/detail', {stylesheet: 'bootstrap-grid.min', product : products})
+            res.render('detail', {stylesheet: 'bootstrap-grid.min', product : products})
         }
 
-        
         /* res.status(404).render('products/detail', {stylesheet: 'bootstrap-grid.min', product : error}) */
     
 	},
