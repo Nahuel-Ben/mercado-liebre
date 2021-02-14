@@ -6,13 +6,16 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const controller = {
-	index: (req, res) => {
-		res.render('index', {products : products})}	,
+module.exports =  {
+	index: (req, res, next) => {
+		res.render('index', {products : products})
+		//res.send('Hola soy index')
+	},
 	
 	search: (req, res) => {
 		// Do the magic
+		res.send('Soy el search')
 	},
 };
 
-module.exports = controller;
+//module.exports = controller;

@@ -19,8 +19,7 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views')); // Define la ubicación de la carpeta de las Vistas
-
+app.set('views', path.join(__dirname, './views')); // Define la ubicación de la carpeta de las Vista 
 
 
 // ************ WRITE YOUR CODE FROM HERE ************
@@ -28,8 +27,9 @@ app.set('views', path.join(__dirname, './views')); // Define la ubicación de la
 const mainRouter = require('./routes/main'); // Rutas main
 const productsRouter = require('./routes/products'); // Rutas /products
 
-app.use('/', mainRouter);
+
 app.use('/products', productsRouter);
+app.use('/', mainRouter);
 
 
 

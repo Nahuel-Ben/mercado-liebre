@@ -6,7 +6,7 @@
 	<!-- Header -->
 	<%- include('partials/headerNavbar') %>
 	<!-- /Header -->
-
+	
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="row">
@@ -31,13 +31,13 @@
 								/
 								<b><%= product.discount %></b>
 							</p>
+							<% let finalPrice = product.price - (product.price * product.discount/100) %>
 							<p class="product-detail-price">
-								<%= {product.price - (product.price * product.discount/100)} %>
+								<%= finalPrice %>
 							</p>
 							<p class="product-detail-price">
 								<%= product.price %>
 							</p>
-
 						<ul class="actions-list">
 							<li>
 								<i class="fas fa-credit-card"></i>

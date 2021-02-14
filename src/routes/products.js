@@ -1,12 +1,14 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/', productsController.index); 
+router.get('/', productsController.productsList); 
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.create); 
