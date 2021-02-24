@@ -60,7 +60,7 @@ const productsController = {
 		     return res.render ('product-edit-form', { title: 'Editar | Modificar producto', stylesheet: 'bootstrap-grid.min' })
                   }
 
-                res.status (404).send ('No se encontró el producto')
+                res.status (404).send ('No soe encontró el producto')
 
 	},
 	// Update - Method to update
@@ -69,7 +69,7 @@ const productsController = {
 		
                 let productsList = [...products]
                 let product = productsList.find (r => r.id == req.params.id);
-                let image = image.avatar
+                let image = image.image
                    if (req.files [0] != undefined) {
                    image = req.files[0].filename
                    }
