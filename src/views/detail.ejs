@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: '<%= product.name %>'}) %>
+<%- include('partials/head', {title: ''}) %>
 <body>
 	<!-- Header -->
 	<%- include('partials/headerNavbar') %>
@@ -24,19 +24,19 @@
 				</div>
 				<div class="col-12 col-lg-4">
 					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%= product.name ></h2>
+						<h2 class="product-detail-title"><%= product.name %></h2>
 						
 							<p class="product-detail-price small">
-								<span><%= product.price %></span>
+								<span>$ <%= product.price %></span>
 								/
-								<b><%= product.discount %></b>
+								<b><%= product.discount %>% OFF</b>
 							</p>
 							<% let finalPrice = product.price - (product.price * product.discount/100) %>
 							<p class="product-detail-price">
-								<%= finalPrice %>
+								$ <%= finalPrice %>
 							</p>
 							<p class="product-detail-price">
-								<%= product.price %>
+								$ <%= product.price %>
 							</p>
 						<ul class="actions-list">
 							<li>
@@ -62,7 +62,7 @@
 		</div>
 	</div>
 	<!-- /product detail -->
-
+	
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
