@@ -28,12 +28,12 @@ router.post('/create',upload.any(), productsController.store);
 
 
 /*** GET ONE PRODUCT ***/ 
-router.get('/:id?', productsController.detail);
+router.get('/:id', productsController.detail);
  
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsController.edit); 
-router.put('/edit/:id', productsController.update); 
+router.put('/edit/:id', upload.any(), productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 
