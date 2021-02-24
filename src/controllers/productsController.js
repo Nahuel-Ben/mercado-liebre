@@ -38,7 +38,7 @@ const productsController = {
                 let addProduct = {
 	           id: productsList [productsList.length - 1].id + 1,
                    ...req.body,
-                   avatar: req.files [0].filename
+                   image: req.files [0].filename
                 }
                 productsList.push (addProduct)
 
@@ -64,7 +64,7 @@ const productsController = {
 		
                 let productsList = [...products]
                 let product = productsList.find (r => r.id == req.params.id);
-                let avatar = product.avatar
+                let image = image.avatar
                    if (req.files [0] != undefined) {
                    avatar = req.files[0].filename
                    }
@@ -74,7 +74,7 @@ const productsController = {
                       r = {
                             id: product.id,
                             ...req.body,
-                            avatar: avatar
+                            image: image
                            }
                    }
                   return r
